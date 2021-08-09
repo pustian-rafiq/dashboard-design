@@ -4,6 +4,7 @@
 }
 body {
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .navBar {
   background: rgb(201, 190, 190);
@@ -145,4 +146,86 @@ body {
 .box {
   background: red;
   margin: 1px;
+  height: 60px;
+  text-align: center;
+}
+
+/* Table css */
+.header {
+  position: sticky;
+  top: 0;
+}
+.container {
+  width: 600px;
+  height: 300px;
+  overflow: auto;
+}
+h1 {
+  color: green;
+}
+/* Card Design */
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 8%;
+  padding: 0 2px;
+  height: 100%;
+  cursor: pointer;
+  margin: 1px 0;
+}
+.column2 {
+  float: right;
+  width: 28%;
+  padding: 0 2px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {
+  margin: 0 0;
+  background: blue;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (min-width: 350px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .column2 h3,
+  p {
+    width: 100%;
+    text-align: justify;
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 500px) {
+  .column {
+    width: 50%;
+    display: block;
+    margin-bottom: 10px;
+  }
+  .column2 h3,
+  p {
+    width: 50%;
+    text-align: justify;
+    font-size: 15px;
+  }
+}
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px 2px;
+  text-align: center;
+  background-color: #f1f1f1;
+  height: 100px;
 }
